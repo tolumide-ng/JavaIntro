@@ -27,5 +27,17 @@ public class MyPredicate<T> implements Predicate<T> {
 
         return stringsOfLength3;
     }
+
+
+    int calculate(List<Product> products) {
+        int totalPrice = 0;
+        Consumer<Product> consumer = product -> totalPrice += product.getPrice();
+
+        for (Product product: products) {
+            consumer.accept(product);
+        }
+        
+        return totalPrice;
+    }
     
 }
