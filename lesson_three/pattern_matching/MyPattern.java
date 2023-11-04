@@ -1,10 +1,10 @@
-package lesson_three.pattern_matching;
+LEAWpackage lesson_three.pattern_matching;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MyPattern {
-    String sonnet = "From fairest creatures we desire increase,\n" +
+    static String sonnet = "From fairest creatures we desire increase,\n" +
             "That thereby beauty's rose might never die,\n" +
             "But as the riper should by time decease\n" +
             "His tender heir might bear his memory:\n" +
@@ -19,12 +19,16 @@ public class MyPattern {
             "Pity the world, or else this glutton be,\n" +
             "To eat the world's due, by the grave and thee.";
 
-    Pattern pattern = Pattern.compile("\\bflame\\b");
-    Matcher matcher = pattern.matcher(sonnet);
-    while (matcher.find()) {
-        String group = matcher.group();
-        int start = matcher.start();
-        int end = matcher.end();
-        System.out.println(group + " " + start + " " + end);
+    public static void main(String [] args) {
+        Pattern pattern = Pattern.compile("\\bflame\\b");
+        Matcher matcher = pattern.matcher(MyPattern.sonnet);
+            while (matcher.find()) {
+                String group = matcher.group();
+                int start = matcher.start();
+                int end = matcher.end();
+                System.out.println(group + " " + start + " " + end);
+            }
+
+
     }
 }
