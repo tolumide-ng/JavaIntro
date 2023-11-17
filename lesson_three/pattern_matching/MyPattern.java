@@ -1,4 +1,4 @@
-LEAWpackage lesson_three.pattern_matching;
+package lesson_three.pattern_matching;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
