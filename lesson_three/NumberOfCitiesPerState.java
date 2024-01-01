@@ -13,4 +13,3 @@ record NumberOfCitiesPerState(State state, long numberOfCities) {
 
 // NumberOfCitiesPerState stateWithTheMostCities = 
 //     numberOfCitiesPerState.entrySet().stream().map(NumberOfCitiesPerState::new).max(NumberOfCitiesPerState.comparingByNumberOfCities()).orElseThrow();
-whe
